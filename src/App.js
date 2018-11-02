@@ -1,25 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SmartFormCard from './SmartFormCard';
+import {omitObjIdKey} from "./SmartFormCard/utils";
+import { getAll, updateById } from './API';
+import Spinner from './Spinner';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+  async componentDidMount () {
+    const data = await getAll();
+    this.setState({ data });
+  }
+
+  update = async (input, callback) => {
+    const data = await updateById(input.id, omitObjIdKey(input));
+    callback(data);
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="container">
+        <h1 className="is-size-3 m-t-30 has-text-weight-bold has-text-black-ter">Star wars characters</h1>
+        {this.state.data.length === 0 ? <Spinner /> : null}
+        <div className="columns container m-t-30">
+        {
+          this.state.data.length === 0 ? null :
+          this.state.data.map(user => (
+            <div key={user.id} className="column is-one-quarter">
+              <SmartFormCard
+                handleUpdate={(input, callback) => this.update(input, callback)}
+                initialData={user}
+                loadingIndicator={Spinner}
+              />
+            </div>
+          ))
+        }
+        </div>
       </div>
     );
   }

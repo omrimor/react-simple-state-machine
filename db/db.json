@@ -1,0 +1,68 @@
+{
+  "starwars": [
+    {
+      "name": "Luke Skywalker",
+      "hair_color": "blond red",
+      "eye_color": "blue",
+      "birth_year": "19BBY",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "C-3PO",
+      "hair_color": "n/a",
+      "eye_color": "yellow",
+      "birth_year": "112BBY",
+      "gender": "robot"
+    },
+    {
+      "name": "R2-D2",
+      "hair_color": "n/a",
+      "eye_color": "red blue",
+      "birth_year": "33BBY",
+      "gender": "robot",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Darth Vader",
+      "hair_color": "none",
+      "eye_color": "yellow",
+      "birth_year": "41.9BBY",
+      "gender": "male"
+    },
+    {
+      "id": 5,
+      "name": "Leia Organa",
+      "hair_color": "brown",
+      "eye_color": "brown",
+      "birth_year": "19BBY",
+      "gender": "female"
+    },
+    {
+      "id": 6,
+      "name": "Obi-Wan Kenobi",
+      "hair_color": "auburn, white",
+      "eye_color": "blue-gray",
+      "birth_year": "57BBY",
+      "gender": "male"
+    },
+    {
+      "id": 7,
+      "name": "Chewbacca",
+      "hair_color": "brown",
+      "eye_color": "blue",
+      "birth_year": "200BBY",
+      "gender": "dog"
+    },
+    {
+      "id": 8,
+      "name": "Han Solo",
+      "hair_color": "brown",
+      "eye_color": "brown",
+      "birth_year": "29BBY",
+      "gender": "male"
+    }
+  ]
+}

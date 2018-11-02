@@ -1,0 +1,8 @@
+.is-button {
+  cursor: pointer;
+}
+
+.card-footer-item.is-button:hover {
+    background: #8e44ad;
+    color: #fff;
+}
