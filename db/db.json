@@ -33,12 +33,12 @@
       "gender": "male"
     },
     {
-      "id": 5,
       "name": "Leia Organa",
       "hair_color": "brown",
       "eye_color": "brown",
       "birth_year": "19BBY",
-      "gender": "female"
+      "gender": "female",
+      "id": 5
     },
     {
       "id": 6,

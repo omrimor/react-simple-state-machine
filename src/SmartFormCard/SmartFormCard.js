@@ -30,9 +30,9 @@ export default class SmartFormCard extends Component {
       case 'saving':
         return {
           processing: true,
-          error: null, // Reset any previous error
+          error: null,
           value: { ...previousState.value },
-          editing: true, // Keep the edit view active until save is finished
+          editing: true,
           editValue: { ...previousState.editValue },
         };
       case 'edit':
@@ -48,7 +48,7 @@ export default class SmartFormCard extends Component {
           processing: false,
           error: { ...stateParams },
           value: { ...previousState.value },
-          editing: true, // Keep the edit box open
+          editing: true,
           editValue: { ...previousState.editValue },
         };
       case 'loading': // Same as default
